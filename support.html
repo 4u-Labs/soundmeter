@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Suporte & Central de Ajuda - Sound Meter 4U.IA</title>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="icon-192.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <a href="index.php" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-wave-square"></i></span>
+                <span class="logo-text">4U.IA</span>
+            </a>
+            <h1 class="header-title">Sound Meter</h1>
+            <div class="header-right-group">
+                <a href="index.php" class="btn btn-header-report"><i class="fa-solid fa-arrow-left"></i> Voltar ao App</a>
+            </div>
+        </header>
+
+        <!-- Main Support Content -->
+        <main class="legal-page">
+            <a href="index.php" class="legal-back-link"><i class="fa-solid fa-arrow-left"></i> Voltar para o Medidor de Som</a>
+            
+            <div class="legal-card glass-card">
+                <h1>Suporte & Perguntas Frequentes (FAQ)</h1>
+                <p class="legal-subtitle">Guia Prático, Resolução de Problemas & Contato de Suporte</p>
+                
+                <div class="legal-content">
+                    <h2>Como falar com o suporte?</h2>
+                    <p>Precisa de assistência técnica, encontrou alguma incompatibilidade com seu smartphone ou tem uma sugestão de melhoria? Entre em contato pelos canais oficiais:</p>
+                    <p style="font-size: 1.1rem; font-weight: 700; color: #4facfe; margin: 16px 0;">
+                        <i class="fa-solid fa-envelope"></i> suporte@4u.ia.br &nbsp;|&nbsp; 
+                        <a href="https://4u.ia.br/#contact" target="_blank" class="footer-link">Formulário em 4u.ia.br</a>
+                    </p>
+                    <p>Atendimento técnico ágil com retorno habitual em até 24 a 48 horas úteis.</p>
+
+                    <h2>Perguntas Frequentes (FAQ)</h2>
+
+                    <h3>1. O aplicativo pediu acesso ao microfone. É seguro autorizar?</h3>
+                    <p>Sim, 100% seguro. O Sound Meter precisa do microfone exclusivamente para calcular a intensidade sonora em tempo real. <strong>Nenhum som, conversa ou ruído é gravado ou enviado para a internet</strong>. O processamento acontece apenas na memória temporária do seu navegador.</p>
+
+                    <h3>2. Como emitir o Laudo Técnico em PDF?</h3>
+                    <p>É muito simples:</p>
+                    <ul>
+                        <li>Clique em <strong>"Iniciar"</strong> e deixe o aplicativo coletar o ruído pelo tempo desejado (mínimo de 30 segundos a alguns minutos).</li>
+                        <li>Clique no botão verde <strong>"Gerar Laudo Técnico (PDF)"</strong>.</li>
+                        <li>Preencha o endereço do local e o nome do responsável se desejar.</li>
+                        <li>O sistema já calcula automaticamente os índices $L_{min}$, $L_{eq}$ (média), $L_{max}$, $L_{peak}$, insere o gráfico e emite o parecer da <strong>NBR 10151</strong> e <strong>NR-15</strong>.</li>
+                        <li>Clique em <strong>"Imprimir / Salvar PDF"</strong> para gerar a folha A4 oficial pronta para imprimir ou anexar no WhatsApp.</li>
+                    </ul>
+
+                    <h3>3. Qual a diferença entre dBA, dBC e dBZ?</h3>
+                    <ul>
+                        <li><strong>dBA (Ponderação A):</strong> Simula a curva de sensibilidade do ouvido humano, atenuando graves muito baixos e agudos extremos. É a ponderação exigida pela lei brasileira para ruído urbano (NBR 10151) e segurança do trabalho (NR-15).</li>
+                        <li><strong>dBC (Ponderação C):</strong> Resposta mais ampla em baixas frequências. Excelente para medir graves de som automotivo, subwoofers, batidas e compressores mecânicos.</li>
+                        <li><strong>dBZ (Linear):</strong> Resposta plana de pressão acústica direta, sem qualquer filtro ponderado.</li>
+                    </ul>
+
+                    <h3>4. O que significam os modos Fast e Slow?</h3>
+                    <ul>
+                        <li><strong>Fast (125 ms):</strong> Resposta rápida. Ideal para captar ruídos intermitentes, gritos, pancadas, latidos e portas batendo.</li>
+                        <li><strong>Slow (1 segundo):</strong> Média amortecida. Recomendado para medir ruído de fundo estável, como tráfego contínuo, ar-condicionado e máquinas de fábrica.</li>
+                    </ul>
+
+                    <h3>5. Como instalar como aplicativo no smartphone (PWA)?</h3>
+                    <ul>
+                        <li><strong>No Android (Chrome / Samsung Internet):</strong> Toque no menu de três pontinhos e selecione <strong>"Instalar aplicativo"</strong> ou <em>"Adicionar à Tela Inicial"</em>.</li>
+                        <li><strong>No iPhone (Safari):</strong> Toque no ícone de compartilhamento (quadrado com seta) e escolha <strong>"Adicionar à Tela de Início"</strong>.</li>
+                    </ul>
+
+                    <h3>6. Por que a tela não desliga enquanto estou medindo?</h3>
+                    <p>O Sound Meter utiliza a tecnologia moderna <em>Screen Wake Lock</em>. Enquanto a medição estiver em andamento, a tela do celular permanecerá acesa para você acompanhar os decibéis sem interrupções. Ao pausar ou sair do app, o bloqueio volta ao normal.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <div class="footer-links-row">
+                <a href="privacy.html" class="footer-nav-link">Privacidade</a>
+                <span class="footer-sep">&bull;</span>
+                <a href="terms.html" class="footer-nav-link">Termos de Uso</a>
+                <span class="footer-sep">&bull;</span>
+                <a href="support.html" class="footer-nav-link active">Suporte & FAQ</a>
+            </div>
+            <p class="footer-copyright">
+                &copy; 2026 Sound Meter &bull; Todos os direitos reservados. Feito com amor por 
+                <a href="https://4u.ia.br" target="_blank" class="footer-link">4u.ia.br</a>.
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

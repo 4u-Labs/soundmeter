@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Política de Privacidade - Sound Meter 4U.IA</title>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="icon-192.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <a href="index.php" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-wave-square"></i></span>
+                <span class="logo-text">4U.IA</span>
+            </a>
+            <h1 class="header-title">Sound Meter</h1>
+            <div class="header-right-group">
+                <a href="index.php" class="btn btn-header-report"><i class="fa-solid fa-arrow-left"></i> Voltar ao App</a>
+            </div>
+        </header>
+
+        <!-- Main Legal Content -->
+        <main class="legal-page">
+            <a href="index.php" class="legal-back-link"><i class="fa-solid fa-arrow-left"></i> Voltar para o Medidor de Som</a>
+            
+            <div class="legal-card glass-card">
+                <h1>Política de Privacidade</h1>
+                <p class="legal-subtitle">Última atualização: 10 de Setembro de 2026 &bull; Em conformidade com a LGPD (Lei nº 13.709/2018)</p>
+                
+                <div class="legal-content">
+                    <p>A sua privacidade e a segurança dos seus dados são compromissos inegociáveis do <strong>Sound Meter 4U.IA</strong>. Esta Política de Privacidade explica de forma clara, transparente e objetiva como tratamos as informações e permissões ao utilizar o nosso decibelímetro digital e analisador acústico.</p>
+
+                    <h2>1. Permissão de Acesso ao Microfone (Áudio em Tempo Real)</h2>
+                    <p>Para mensurar níveis de pressão sonora em decibéis (dB), o aplicativo solicita permissão de acesso ao microfone do seu dispositivo através da API nativa do navegador (<code>Web Audio API</code>). O funcionamento técnico respeita as seguintes premissas de segurança:</p>
+                    <ul>
+                        <li><strong>Sem Gravação ou Armazenamento de Voz:</strong> O microfone é utilizado <em>exclusivamente</em> para análise matemática instantânea de amplitude e frequência no domínio do tempo e da frequência (FFT).</li>
+                        <li><strong>Processamento 100% Local (Client-Side):</strong> Todo o processamento de sinal ocorre na memória RAM do seu próprio dispositivo. <strong>Nenhum arquivo de áudio, gravação de voz ou som captado é transmitido</strong> para a internet, servidores da 4U.IA ou terceiros.</li>
+                        <li><strong>Controle Total do Usuário:</strong> A captura de áudio só é executada quando você clica expressamente em <em>"Iniciar"</em> e é imediatamente interrompida ao clicar em <em>"Pausar"</em> ou ao fechar a aba.</li>
+                    </ul>
+
+                    <h2>2. Coleta de Dados Pessoais e Cadastro</h2>
+                    <p>O Sound Meter foi arquitetado com base no conceito de <strong>Privacidade por Padrão (Privacy by Default)</strong>:</p>
+                    <ul>
+                        <li><strong>Sem Cadastro Obrigatório:</strong> Você não precisa criar conta, informar e-mail, telefone, CPF ou qualquer dado identificável para utilizar o aplicativo.</li>
+                        <li><strong>Laudos e Relatórios Locais:</strong> As informações preenchidas no gerador de Laudo Técnico (como endereço do local da medição, nome do perito ou solicitante) permanecem estritamente no seu navegador e são utilizadas apenas para renderizar a impressão em folha A4 ou PDF no seu próprio computador ou smartphone.</li>
+                    </ul>
+
+                    <h2>3. Armazenamento Local (LocalStorage e Cache do PWA)</h2>
+                    <p>O aplicativo utiliza o <code>localStorage</code> do seu navegador para fins estritamente funcionais e de conveniência:</p>
+                    <ul>
+                        <li>Manter seu deslocamento de calibração manual configurado (offset em dB).</li>
+                        <li>Salvar o limiar configurado para o alarme vibratório de ruído.</li>
+                        <li>O <em>Service Worker</em> armazena em cache os arquivos essenciais de interface (HTML, CSS, JS e ícones) para que o aplicativo possa carregar instantaneamente e operar mesmo sem conexão com a internet (offline).</li>
+                    </ul>
+
+                    <h2>4. Compartilhamento e Venda de Dados</h2>
+                    <p>Não compartilhamos, alugamos ou comercializamos qualquer informação de medição ou dados analíticos dos nossos usuários. Não empregamos rastreadores invasivos de terceiros que monitorem sua navegação fora do domínio.</p>
+
+                    <h2>5. Direitos do Titular (LGPD)</h2>
+                    <p>Em consonância com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), garantimos total transparência sobre o uso de recursos de hardware. Como não armazenamos registros de telemetria identificáveis em banco de dados, você tem o controle soberano para revogar permissões de microfone a qualquer momento diretamente nas configurações de permissões do seu navegador.</p>
+
+                    <h2>6. Contato com o Encarregado de Privacidade</h2>
+                    <p>Para dúvidas, esclarecimentos ou sugestões relacionadas a esta Política de Privacidade, entre em contato através da nossa página oficial em <a href="https://4u.ia.br/#contact" target="_blank" class="footer-link">4u.ia.br/#contact</a> ou pelo e-mail institucional de suporte.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <div class="footer-links-row">
+                <a href="privacy.html" class="footer-nav-link active">Privacidade</a>
+                <span class="footer-sep">&bull;</span>
+                <a href="terms.html" class="footer-nav-link">Termos de Uso</a>
+                <span class="footer-sep">&bull;</span>
+                <a href="support.html" class="footer-nav-link">Suporte & FAQ</a>
+            </div>
+            <p class="footer-copyright">
+                &copy; 2026 Sound Meter &bull; Todos os direitos reservados. Feito com amor por 
+                <a href="https://4u.ia.br" target="_blank" class="footer-link">4u.ia.br</a>.
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
