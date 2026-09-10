@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sound-meter-v1.3.0';
+const CACHE_NAME = 'sound-meter-v1.3.1';
 const ASSETS = [
     './',
     './index.php',

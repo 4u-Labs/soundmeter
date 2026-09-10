@@ -325,7 +325,7 @@ $v = time();
                 <span class="footer-sep">&bull;</span>
                 <a href="support.html" class="footer-nav-link">Suporte & FAQ</a>
                 <span class="footer-sep">&bull;</span>
-                <a href="https://github.com/4u-Labs/soundmeter" target="_blank" rel="noopener noreferrer" class="footer-nav-link"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://github.com/4u-Labs" target="_blank" rel="noopener noreferrer" class="footer-nav-link"><i class="fa-brands fa-github"></i> GitHub</a>
             </div>
             <p class="footer-copyright">
                 &copy; <?php echo date("Y"); ?> Sound Meter &bull; Todos os direitos reservados. Feito com amor por 

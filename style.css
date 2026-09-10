@@ -1398,18 +1398,23 @@ input:checked + .switch-slider:before {
 /* Report Modal & Printable Layout */
 .report-modal-card {
     max-width: 820px;
+    width: 100%;
     max-height: 90vh;
     max-height: 90dvh;
     display: flex;
     flex-direction: column;
     padding: 24px;
+    box-sizing: border-box;
 }
 
 .report-scroll-container {
     overflow-y: auto;
+    overflow-x: hidden;
     padding-right: 6px;
     flex-grow: 1;
     margin-bottom: 12px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .report-document {
@@ -1419,6 +1424,10 @@ input:checked + .switch-slider:before {
     padding: 26px;
     font-size: 13px;
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.35);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .report-header {
@@ -1709,6 +1718,30 @@ input:checked + .switch-slider:before {
     .no-print {
         display: none !important;
     }
+    .report-header {
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+    .report-doc-id {
+        text-align: right !important;
+    }
+    .report-form-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 10px !important;
+    }
+    .report-metrics-grid {
+        grid-template-columns: repeat(6, 1fr) !important;
+        gap: 6px !important;
+    }
+    .report-compliance-box {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 12px !important;
+    }
+    .report-signatures {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 36px !important;
+        margin-top: 36px !important;
+    }
     .report-input, .report-textarea {
         border: none !important;
         background: transparent !important;
@@ -1912,5 +1945,139 @@ input:checked + .switch-slider:before {
     }
     .app-footer {
         padding: 16px 12px;
+    }
+
+    /* Report Modal Mobile Optimization */
+    .modal-overlay {
+        padding: 6px !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .report-modal-card {
+        padding: 14px 10px !important;
+        max-height: 94vh !important;
+        max-height: 94dvh !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        border-radius: 16px !important;
+    }
+    .report-scroll-container {
+        padding: 0 2px 0 0 !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .report-document {
+        padding: 14px 10px !important;
+        border-radius: 10px !important;
+        font-size: 11px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
+    }
+    .report-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 6px !important;
+        padding-bottom: 8px !important;
+        margin-bottom: 10px !important;
+    }
+    .report-logo .logo-icon {
+        font-size: 24px !important;
+    }
+    .report-brand {
+        font-size: 16px !important;
+    }
+    .report-doc-id {
+        text-align: left !important;
+        font-size: 10.5px !important;
+    }
+    .report-sec-title {
+        font-size: 11px !important;
+        padding: 4px 8px !important;
+        margin: 10px 0 6px 0 !important;
+    }
+    .report-form-grid {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+        min-width: 0 !important;
+    }
+    .report-field {
+        min-width: 0 !important;
+    }
+    .report-field label {
+        font-size: 9px !important;
+    }
+    .report-input {
+        font-size: 12px !important;
+        padding: 6px 8px !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+    }
+    .report-metrics-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 4px !important;
+        padding: 8px 3px !important;
+        min-width: 0 !important;
+    }
+    .report-metric-box {
+        min-width: 0 !important;
+    }
+    .rep-lbl {
+        font-size: 8px !important;
+    }
+    .rep-val {
+        font-size: 12.5px !important;
+    }
+    .report-sub-details {
+        flex-direction: column !important;
+        gap: 3px !important;
+        font-size: 10px !important;
+    }
+    .report-compliance-box {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+        min-width: 0 !important;
+    }
+    .rep-comp-item {
+        padding: 8px 10px !important;
+        min-width: 0 !important;
+    }
+    .rep-comp-item h4 {
+        font-size: 11px !important;
+        margin-bottom: 4px !important;
+    }
+    .rep-comp-item p {
+        font-size: 10px !important;
+    }
+    .report-textarea {
+        font-size: 11px !important;
+        padding: 6px 8px !important;
+        min-width: 0 !important;
+    }
+    .report-signatures {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+        margin-top: 18px !important;
+        min-width: 0 !important;
+    }
+    .sig-line {
+        min-width: 0 !important;
+    }
+    .report-footer {
+        flex-direction: column !important;
+        gap: 8px !important;
+        padding-top: 10px !important;
+        margin-top: 8px !important;
+    }
+    .report-footer .btn {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 10px 14px !important;
+        font-size: 13px !important;
     }
 }
