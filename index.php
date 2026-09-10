@@ -464,7 +464,7 @@ $v = time();
             <div class="modal-footer report-footer no-print">
                 <button id="btn-print-report" class="btn btn-glow"><i class="fa-solid fa-print"></i> Imprimir / Salvar PDF</button>
                 <button id="btn-export-csv-report" class="btn btn-secondary"><i class="fa-solid fa-file-csv"></i> Baixar CSV</button>
-                <button id="btn-close-report-footer" class="btn btn-secondary">Fechar</button>
+                <button id="btn-close-report-footer" class="btn btn-secondary"><i class="fa-solid fa-xmark"></i> Fechar</button>
             </div>
         </div>
     </div>
@@ -549,8 +549,11 @@ $v = time();
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('service-worker.js')
-                    .then((reg) => console.log('Service Worker registrado!', reg))
+                navigator.serviceWorker.register('service-worker.js?v=<?php echo $v; ?>')
+                    .then((reg) => {
+                        reg.update();
+                        console.log('Service Worker registrado!', reg);
+                    })
                     .catch((err) => console.error('Erro ao registrar Service Worker:', err));
             });
         }

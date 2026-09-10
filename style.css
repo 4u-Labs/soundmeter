@@ -423,22 +423,28 @@ h1, h2, h3, h4 {
 /* Button stylings */
 .btn {
     font-family: 'Outfit', sans-serif;
+    font-size: 14px;
     font-weight: 600;
-    border: none;
+    padding: 11px 22px;
+    border: 1px solid transparent;
     border-radius: 12px;
     cursor: pointer;
     transition: var(--transition-smooth);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
+    text-decoration: none;
+    white-space: nowrap;
+    user-select: none;
 }
 
 .btn-glow {
     background: var(--primary-gradient);
     color: #fff;
-    padding: 12px 28px;
+    padding: 12px 26px;
     box-shadow: var(--primary-glow);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .btn-glow:hover:not(:disabled) {
@@ -448,6 +454,27 @@ h1, h2, h3, h4 {
 
 .btn-glow:active:not(:disabled) {
     transform: translateY(0);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: var(--text-primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.btn-secondary:active:not(:disabled) {
+    transform: translateY(0);
+    background: rgba(255, 255, 255, 0.12);
 }
 
 .controls-row {
@@ -1532,8 +1559,31 @@ input:checked + .switch-slider:before {
 
 .report-footer {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.report-footer .btn {
+    padding: 11px 22px;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+}
+
+.report-footer .btn i {
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .report-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .report-footer .btn {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 /* Print Media Styles (A4 formatting) */

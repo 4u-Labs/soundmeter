@@ -1,12 +1,12 @@
-const CACHE_NAME = 'sound-meter-v1.2.0';
+const CACHE_NAME = 'sound-meter-v1.2.1';
 const ASSETS = [
     './',
-    './index.html?v=1.2.0',
-    './style.css?v=1.2.0',
-    './app.js?v=1.2.0',
-    './manifest.json?v=1.2.0',
-    './icon-192.png?v=1.2.0',
-    './icon-512.png?v=1.2.0'
+    './index.php',
+    './style.css',
+    './app.js',
+    './manifest.json',
+    './icon-192.png',
+    './icon-512.png'
 ];
 
 // Install Service Worker and cache assets
