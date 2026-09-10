@@ -549,7 +549,7 @@ $v = time();
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('service-worker.js?v=<?php echo $v; ?>')
+                navigator.serviceWorker.register('service-worker.js?v=<?php echo $v; ?>', { updateViaCache: 'none' })
                     .then((reg) => {
                         reg.update();
                         console.log('Service Worker registrado!', reg);

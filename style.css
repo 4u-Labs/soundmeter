@@ -142,9 +142,22 @@ h1, h2, h3, h4 {
     flex-grow: 1;
 }
 
+/* Panels */
+.meter-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.details-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 @media (min-width: 992px) {
     .app-main {
-        grid-template-columns: 450px 1fr;
+        grid-template-columns: 440px 1fr;
+        gap: 20px;
     }
 }
 
@@ -179,8 +192,9 @@ h1, h2, h3, h4 {
 
 /* Meter Panel (Gauge Card) */
 .main-meter-card {
-    min-height: 480px;
-    justify-content: space-between;
+    min-height: auto;
+    justify-content: flex-start;
+    gap: 12px;
     align-items: center;
     position: relative;
 }
@@ -748,20 +762,50 @@ h1, h2, h3, h4 {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
+.footer-links-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    margin-bottom: 4px;
+}
+
+.footer-nav-link {
+    color: #94a3b8 !important;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-nav-link:hover {
+    color: #38bdf8 !important;
+}
+
+.footer-sep {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 10px;
+}
+
 .footer-copyright, .footer-support {
     font-size: 11px;
-    color: var(--text-secondary);
+    color: #64748b;
+    line-height: 1.5;
 }
 
 .footer-link {
-    color: #4facfe;
+    color: #38bdf8 !important;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 600;
     transition: var(--transition-smooth);
 }
 
 .footer-link:hover {
-    color: #00f2fe;
+    color: #00f2fe !important;
     text-decoration: underline;
 }
 
@@ -996,16 +1040,17 @@ h1, h2, h3, h4 {
 }
 
 .pill-group {
-    display: flex;
-    background: rgba(0, 0, 0, 0.35);
+    display: inline-flex;
+    background: rgba(0, 0, 0, 0.4);
     border: 1px solid var(--card-border);
     border-radius: 20px;
-    padding: 2px;
+    padding: 3px;
+    gap: 2px;
 }
 
 .pill-btn {
     background: transparent;
-    border: none;
+    border: 1px solid transparent;
     color: var(--text-secondary);
     font-size: 11px;
     font-weight: 700;
@@ -1013,6 +1058,8 @@ h1, h2, h3, h4 {
     border-radius: 16px;
     cursor: pointer;
     transition: var(--transition-smooth);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .pill-btn:hover {
@@ -1021,45 +1068,53 @@ h1, h2, h3, h4 {
 
 .pill-btn.active {
     background: var(--primary-gradient);
-    color: #fff;
+    color: #ffffff;
     box-shadow: 0 0 10px rgba(79, 172, 254, 0.4);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 /* 4-column Stats Row */
 .stats-row.stats-grid-4 {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 12px 6px;
+    margin: 12px 0;
 }
 
-@media (max-width: 380px) {
-    .stats-row.stats-grid-4 {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
-    }
-    .stats-row.stats-grid-4 .stat-box {
-        border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        padding-bottom: 6px;
-    }
+.stats-row.stats-grid-4 .stat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 0 4px;
+}
+
+.stats-row.stats-grid-4 .stat-box:last-child {
+    border-right: none;
 }
 
 /* Report Action Button Prominent */
 .btn-report-prominent {
     width: 100%;
-    margin-top: 12px;
-    padding: 14px;
+    margin-top: 10px;
+    padding: 13px 18px;
     background: linear-gradient(135deg, #10b981 0%, #059669 100%);
     color: #ffffff;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
-    letter-spacing: 0.5px;
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.45);
-    border: 1px solid rgba(16, 185, 129, 0.6);
+    letter-spacing: 0.3px;
+    box-shadow: 0 0 16px rgba(16, 185, 129, 0.35);
+    border: 1px solid rgba(16, 185, 129, 0.5);
     border-radius: 14px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
     transition: var(--transition-smooth);
 }
 
@@ -1082,6 +1137,7 @@ h1, h2, h3, h4 {
     align-items: center;
     gap: 6px;
     transition: var(--transition-smooth);
+    white-space: nowrap;
 }
 
 .btn-header-report:hover {
@@ -1095,6 +1151,15 @@ h1, h2, h3, h4 {
     display: flex;
     align-items: center;
     gap: 12px;
+}
+
+@media (max-width: 600px) {
+    #btn-header-report {
+        display: none !important;
+    }
+    .header-right-group {
+        gap: 6px;
+    }
 }
 
 /* Alarm & Vibration Section */
@@ -1222,33 +1287,40 @@ input:checked + .switch-slider:before {
 }
 
 .chart-mode-tabs {
-    display: flex;
-    gap: 4px;
-    background: rgba(0, 0, 0, 0.3);
+    display: inline-flex;
+    gap: 3px;
+    background: rgba(0, 0, 0, 0.4);
     border: 1px solid var(--card-border);
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 3px;
 }
 
 .chart-mode-btn {
     background: transparent;
-    border: none;
+    border: 1px solid transparent;
     color: var(--text-secondary);
     font-size: 11px;
     font-weight: 600;
-    padding: 5px 10px;
-    border-radius: 7px;
+    padding: 5px 12px;
+    border-radius: 16px;
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 6px;
     transition: var(--transition-smooth);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.chart-mode-btn:hover {
+    color: var(--text-primary);
 }
 
 .chart-mode-btn.active {
-    background: rgba(255, 255, 255, 0.1);
-    color: #4facfe;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background: var(--primary-gradient);
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(79, 172, 254, 0.4);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Dosimeter Widget */
@@ -1304,10 +1376,23 @@ input:checked + .switch-slider:before {
     justify-content: space-between;
     font-size: 11px;
     color: var(--text-secondary);
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
 .dose-details strong {
     color: var(--text-primary);
+}
+
+@media (max-width: 480px) {
+    .dose-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px 8px;
+    }
+    .dose-details span:last-child {
+        grid-column: span 2;
+    }
 }
 
 /* Report Modal & Printable Layout */
@@ -1746,4 +1831,86 @@ input:checked + .switch-slider:before {
     font-size: 12px;
     color: #00f2fe;
     border: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+/* =======================================================
+   MOBILE GENERAL REFINEMENTS (Max-width: 600px)
+   ======================================================= */
+@media (max-width: 600px) {
+    .app-container {
+        padding: 10px;
+        gap: 12px;
+    }
+    .app-header {
+        padding: 10px 14px;
+        margin-bottom: 12px;
+    }
+    .header-title {
+        display: none !important;
+    }
+    #btn-header-report {
+        display: none !important;
+    }
+    .header-right-group {
+        gap: 6px;
+    }
+    .glass-card {
+        padding: 16px;
+        border-radius: 16px;
+    }
+    .card-title {
+        font-size: 16px;
+        margin-bottom: 14px;
+    }
+    .audio-config-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    .stats-row.stats-grid-4 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px 0 !important;
+        padding: 10px 4px !important;
+    }
+    .stats-row.stats-grid-4 .stat-box:nth-child(1),
+    .stats-row.stats-grid-4 .stat-box:nth-child(3) {
+        border-right: 1px solid rgba(255, 255, 255, 0.06) !important;
+    }
+    .stats-row.stats-grid-4 .stat-box:nth-child(2),
+    .stats-row.stats-grid-4 .stat-box:nth-child(4) {
+        border-right: none !important;
+    }
+    .stats-row.stats-grid-4 .stat-box:nth-child(1),
+    .stats-row.stats-grid-4 .stat-box:nth-child(2) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+        padding-bottom: 8px !important;
+    }
+    .stats-row.stats-grid-4 .stat-box:nth-child(3),
+    .stats-row.stats-grid-4 .stat-box:nth-child(4) {
+        padding-top: 6px !important;
+    }
+    .stat-value {
+        font-size: 18px !important;
+    }
+    .controls-row {
+        gap: 8px;
+    }
+    .btn-control {
+        padding: 12px;
+        font-size: 14px;
+    }
+    .btn-report-prominent {
+        padding: 12px 14px;
+        font-size: 13.5px;
+        margin-top: 8px;
+    }
+    .alarm-section {
+        padding: 8px 12px;
+    }
+    .calibration-section {
+        padding: 10px 12px;
+    }
+    .app-footer {
+        padding: 16px 12px;
+    }
 }
